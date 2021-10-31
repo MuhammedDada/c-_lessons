@@ -8,11 +8,11 @@ class Program
        string UserName; 
        string PassWord; 
        //output
-       Console.WriteLine(write your UserName);
+       Console.WriteLine("write your UserName");
        //input
        UserName = Console.ReadLine();
        //output 
-       Console.WriteLine = (write your PassWord)
+       Console.WriteLine = ("write your PassWord")
        //input 
        PassWord= Console.ReadLine();
         
@@ -21,17 +21,17 @@ class Program
  
        if (PassWord=="hoopoe2021")
       
-      Console.WriteLine("Welcome")
+      Console.WriteLine("Welcome");
 
       
      else 
 
-     Console.WriteLine("username or password not correct")
+     Console.WriteLine("username or password not correct");
     
         
         else
         {
-            Console.WriteLine("password not correct")
+            Console.WriteLine("password not correct");
         }
 
 
