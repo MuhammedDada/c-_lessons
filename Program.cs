@@ -2,33 +2,45 @@
 
 namespace Account
 {
-    class User
+
+
+    class Program
     {
-        public string FirstName;
-        public string lastName;
-        public string UserName;
-        public string Email;
-        public DateTime BirthDay;
-        public double monthlysalary;
-        public string mobile;
-        public double nationalid;
-        private string number;
-        public string Mobile()
+
+        static void Main(string[] args)
         {
-            return mobile;
+            #region User class
+            User Users = new User();
+            Console.WriteLine("First Name");
+            Users.FirstName = Console.ReadLine();
+            Console.WriteLine("Last Name:");
+            Users.lastName = Console.ReadLine();
+            Console.WriteLine("User Name:");
+            Users.UserName = Console.ReadLine();
+            Console.WriteLine("Email");
+            Users.Email = Console.ReadLine();
+            Console.WriteLine("mobile");
+            Users.mobile = Console.ReadLine();
+            Console.WriteLine("nationalid");
+            Users.nationalid = Console.ReadLine();
+            Console.WriteLine("monthly Salary");
+            Users.monthlysalary = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine(Users.FullName());
+            Console.WriteLine("User's Mobile Number:" + Users.Mobile());
+            Console.WriteLine("birthday")
+            Users.birthDay = Convert.ToDateTime(Console.ReadLine());
+            Console.WriteLine("User's age is: " + Users.CalAge());
+            #endregion
+            #region Check password
+            Console.WriteLine("write your password");
+            string userPassword = Console.ReadLine();
+            #endregion
+            #region Confirm password
+            Console.WriteLine("enter you password");
+            Console.WriteLine("confirm your password again");
         }
-        private string Name;
-        public string FullName()
-        {
-            Name = string.Concat(FirstName + lastName);
-            return Name;
-        }
-        private DateTime today = DateTime.Now;
-        private int Age;
-        public int CalAge()
-        {
-            Age = today.Year - BirthDay.Year;
-            return Age;
-        }
+        #endregion
     }
+
+
 }
